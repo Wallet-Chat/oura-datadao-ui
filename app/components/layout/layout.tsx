@@ -123,16 +123,6 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
                         Moksha Testnet
                       </Menu.Item>}
                       <Menu.Item
-                        onClick={() => setNetwork("satori")}
-                        leftSection={
-                          network === "satori" && (
-                            <Icon icon="carbon:checkmark" />
-                          )
-                        }
-                      >
-                        Satori Testnet
-                      </Menu.Item>
-                      <Menu.Item
                         disabled
                         onClick={() => setNetwork("mainnet")}
                         leftSection={

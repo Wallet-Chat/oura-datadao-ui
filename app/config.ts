@@ -6,13 +6,6 @@ const networks = {
     explorerUrl: "https://moksha.vanascan.io",
     currency: "VANA",
   },
-  satori: {
-    chainId: "14801",
-    rpcUrl: "https://rpc.satori.vana.org",
-    chainName: "Vana Satori Testnet",
-    explorerUrl: "https://satori.vanascan.io",
-    currency: "VANA",
-  },
   mainnet: {
     chainId: "1480",
     rpcUrl: "https://rpc.vana.org",

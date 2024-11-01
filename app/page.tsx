@@ -362,20 +362,15 @@ export default function Page() {
 
   return (
     <Box>
-      <Container>
-        <Grid gutter="lg" grow>
-          <Grid.Col
-            span={4}
-            offset={{ sm: 0, md: 1 }}
-            pt={{ sm: 0, md: 50 }}
-            order={{ base: 1, md: 2 }}
-          >
-            <Stack gap="md">
-              <Title order={5}>
-                Contribute data
+      <Container size="sm">
+        <Stack spacing="xl" align="center" my={50}>
+          {/* Oura Ring component would go here */}
+          <Paper shadow="md" p="xl" radius="md" withBorder style={{ width: '100%', maxWidth: 450 }}>
+            <Stack spacing="md">
+              <Title order={3} align="center">
+                Contribute Data via Manual Upload
               </Title>
-              <span>You can use this example <a href={"/archive.zip"} style={{textDecoration: "underline"}}>archive</a> to test the contribution process.</span>
-
+              
               {uploadState === "initial" && !isDropboxConnected && (
                 <ConnectStep />
               )}
@@ -407,9 +402,9 @@ export default function Page() {
                 )}
 
               {statusLog.length > 0 && (
-                <Stack gap="md">
+                <Stack spacing="xs">
                   <Title order={6}>Status Log:</Title>
-                  <Paper p="sm">
+                  <Paper withBorder p="sm">
                     {statusLog.map((status, index) => (
                       <Text key={index} mb={6}>
                         — {status}
@@ -426,8 +421,8 @@ export default function Page() {
                 </Notification>
               </Dialog>
             </Stack>
-          </Grid.Col>
-        </Grid>
+          </Paper>
+        </Stack>
       </Container>
     </Box>
   );

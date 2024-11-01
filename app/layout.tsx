@@ -1,5 +1,3 @@
-// Import styles of packages that you've installed.
-// All packages except `@mantine/hooks` require styles imports
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 import "@mantine/notifications/styles.css";
@@ -9,6 +7,9 @@ import type { Metadata } from "next";
 import { Layout } from "./components";
 import "./globals.css";
 import Providers from "./providers";
+
+// Import OuraRingOAuth component
+import OuraRingOAuth from "./components/OuraRingOAuth";
 
 export const metadata: Metadata = {
   title: "YOUR DATA DAO",
@@ -25,7 +26,11 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <Providers>
-          <Layout>{children}</Layout>
+          <Layout>
+            {/* Add OuraRingOAuth component here */}
+            <OuraRingOAuth />
+            {children}
+          </Layout>
         </Providers>
       </body>
     </html>
